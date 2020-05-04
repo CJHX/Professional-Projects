@@ -81,7 +81,7 @@ function pushbutton1_Callback(hObject, eventdata, handles) %#ok<*DEFNU>
 % hObject    handle to pushbutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-%import data from Excel in Row and column vectors (ÁĞÊ§Á¿£© format, make sure the date are the first
+%import data from Excel in Row and column vectors (åˆ—å¤±é‡ï¼‰ format, make sure the date are the first
 %column, total asset is second and change is 3rd
 %rename imported data VarName1 to 'date'
 %rename imported data VarName2 to 'value'
@@ -210,7 +210,7 @@ if basiccalc > 0
     out1 = cellfun(@(x) sprintf('%0.5f%%',x*100),num2cell(out1),'UniformOutput',false);
     out2 = cellfun(@(x) sprintf('%0.5f%',x),num2cell(out2),'UniformOutput',false);
 else
-    out1 = 'Êı¾İ´íÎó';
+    out1 = 'æ•°æ®é”™è¯¯';
     out1=cellstr(out1);
     out2 = [];
     out3 = [];
@@ -304,24 +304,24 @@ end
     finaloutput{6,3} = maxdrawdownscore;
     finaloutput{7,3} = sharpscore;
     finaloutput{10,3} = mthlyrtnscore;
-    finaloutput{2,1}='Äê»¯ÊÕÒæ';
-    finaloutput{3,1}='Äê»¯²¨¶¯';
-    finaloutput{4,1} ='ÏÂĞĞ·çÏÕ';
-    finaloutput{5,1} ='Äê»¯ÏÂĞĞ·çÏÕ';
-    finaloutput{6,1} ='×î´ó»Ø³·';
-    finaloutput{7,1} ='ÏÄÆÕ±ÈÂÊ';
-    finaloutput{8,1} ='ËùÌáÅµ±ÈÂÊ';
-    finaloutput{9,1} ='¿¨Âê±ÈÂÊ';
-    finaloutput{10,1} ='ÔÂ¶ÈÕıÊÕÒæÇé¿ö';
-    finaloutput{11,1} ='¦ÂÏµÊı-ÉÏÖ¤50';
-    finaloutput{12,1} ='¦ÂÏµÊı-ÖĞÖ¤500';
-    finaloutput{13,1} ='¦ÂÏµÊı-ÖĞÖ¤È«Õ®';
-    finaloutput{14,1} ='¦ÂÏµÊı-ÄÏ»ªÉÌÆ·';
-    finaloutput{1,2} ='Êı¾İ';
-    finaloutput{1,3} ='ÆÀ·Ö';
+    finaloutput{2,1}='å¹´åŒ–æ”¶ç›Š';
+    finaloutput{3,1}='å¹´åŒ–æ³¢åŠ¨';
+    finaloutput{4,1} ='ä¸‹è¡Œé£é™©';
+    finaloutput{5,1} ='å¹´åŒ–ä¸‹è¡Œé£é™©';
+    finaloutput{6,1} ='æœ€å¤§å›æ’¤';
+    finaloutput{7,1} ='å¤æ™®æ¯”ç‡';
+    finaloutput{8,1} ='æ‰€æè¯ºæ¯”ç‡';
+    finaloutput{9,1} ='å¡ç›æ¯”ç‡';
+    finaloutput{10,1} ='æœˆåº¦æ­£æ”¶ç›Šæƒ…å†µ';
+    finaloutput{11,1} ='Î²ç³»æ•°-ä¸Šè¯50';
+    finaloutput{12,1} ='Î²ç³»æ•°-ä¸­è¯500';
+    finaloutput{13,1} ='Î²ç³»æ•°-ä¸­è¯å…¨å€º';
+    finaloutput{14,1} ='Î²ç³»æ•°-å—åå•†å“';
+    finaloutput{1,2} ='æ•°æ®';
+    finaloutput{1,3} ='è¯„åˆ†';
     
     sheetname= sheets(:,sheetnumber);
-    excelend= '·ÖÎö½á¹û.xlsx';
+    excelend= 'åˆ†æç»“æœ.xlsx';
     filenamefinal=strcat(filename,excelend);
     filenamefinal=char(filenamefinal);
     finalsheetname=char(sheetname);
@@ -337,7 +337,7 @@ end
     set(handles.listbox3,'string',postsheets);
         
 end
-   set(handles.listbox1,'string','¼ÆËãÍê³É');
+   set(handles.listbox1,'string','è®¡ç®—å®Œæˆ');
 
 % --- Executes on key press with focus on pushbutton1 and none of its controls.
 function pushbutton1_KeyPressFcn(hObject, eventdata, handles) %#ok<*INUSD>
@@ -406,7 +406,7 @@ data.sheets=sheets;
 
 set(handles.listbox4,'string',data.sheets);
 set(hObject,'UserData',data);
-set(handles.listbox1,'string','×¼±¸¾ÍĞ÷');
+set(handles.listbox1,'string','å‡†å¤‡å°±ç»ª');
 
 % --- Executes on selection change in listbox3.
 function listbox3_Callback(hObject, eventdata, handles)
@@ -459,7 +459,7 @@ function pushbutton7_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton7 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-msgbox('ÇëÈ·±£ÈÕÆÚÁĞµÄ¸ñÊ½Îª(ÔÂÔÂ/ÈÕÈÕ/ÄêÄêÄêÄê)£¬´Ó×îÀÏµ½×îĞÂÅÅÁĞ¡£ Í¬Ê±£¬ÇëÈ·±£ÎÄ¼şµÄµÚÒ»ĞĞÊÇ±êÌâ(ÈçÈÕÆÚ£¬¾»ÖµµÈ)£¬·ñÔò·ÖÎö½á¹û»á²»¾«È·¡£', 'ÖØÒªÌáÊ¾','warn');
+msgbox('è¯·ç¡®ä¿æ—¥æœŸåˆ—çš„æ ¼å¼ä¸º(æœˆæœˆ/æ—¥æ—¥/å¹´å¹´å¹´å¹´)ï¼Œä»æœ€è€åˆ°æœ€æ–°æ’åˆ—ã€‚ åŒæ—¶ï¼Œè¯·ç¡®ä¿æ–‡ä»¶çš„ç¬¬ä¸€è¡Œæ˜¯æ ‡é¢˜(å¦‚æ—¥æœŸï¼Œå‡€å€¼ç­‰)ï¼Œå¦åˆ™åˆ†æç»“æœä¼šä¸ç²¾ç¡®ã€‚', 'é‡è¦æç¤º','warn');
 
 
 % --- If Enable == 'on', executes on mouse press in 5 pixel border.
